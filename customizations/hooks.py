@@ -1,5 +1,5 @@
 app_name = "customizations"
-app_title = "custom"
+app_title = "dreamlink"
 app_publisher = "saajidh"
 app_description = "all customizations for the frappe app"
 app_email = "saajidh@calcey.com"
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "customizations",
 # 		"logo": "/assets/customizations/logo.png",
-# 		"title": "custom",
+# 		"title": "dreamlink",
 # 		"route": "/customizations",
 # 		"has_permission": "customizations.api.permission.has_app_permission"
 # 	}
@@ -171,7 +171,7 @@ app_license = "mit"
 #
 # Specify custom mixins to extend the standard doctype controller.
 # extend_doctype_class = {
-# 	"Task": "customizations.custom.task.CustomTaskMixin"
+# 	"Task": "customizations.dreamlink.task.CustomTaskMixin"
 # }
 
 # Overriding Methods
