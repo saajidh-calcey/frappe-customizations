@@ -5,6 +5,18 @@ app_description = "all customizations for the frappe app"
 app_email = "saajidh@calcey.com"
 app_license = "mit"
 
+# Fixtures
+# ------------------
+
+fixtures = [
+    {"dt": "CRM Lead"},
+    # {"dt": "Workflow State"},
+    # {"dt": "Workflow Action"},
+    # {"dt": "CRM Lead Status"},
+    # {"dt": "Workflow Action Master"},
+    # {"dt": "Role", "filters": [["role_name", "like", "Supervisor"]]},
+]
+
 # Apps
 # ------------------
 

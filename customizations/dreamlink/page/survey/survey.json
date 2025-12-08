@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2025-12-02 00:11:57.287658",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "",
+ "idx": 0,
+ "modified": "2025-12-02 00:11:57.287658",
+ "modified_by": "Administrator",
+ "module": "dreamlink",
+ "name": "survey",
+ "owner": "Administrator",
+ "page_name": "survey",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Survey"
+}
