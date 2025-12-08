@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prebuild": "node ./custom-build.js",
     "dev": "vite",
-    "build": "vite build --base=/assets/crm/frontend/ && yarn copy-html-entry",
-    "copy-html-entry": "cp ../crm/public/frontend/index.html ../crm/www/crm.html",
+    "build": "yarn prebuild && vite build --base=/assets/customizations/frontend/ && yarn copy-html-entry",
+    "copy-html-entry": "cp ../customizations/public/frontend/index.html ../customizations/www/crm.html",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -22,7 +23,9 @@
     "sortablejs": "^1.15.0",
     "vue": "^3.5.13",
     "vue-router": "^4.2.2",
-    "vuedraggable": "^4.1.0"
+    "vuedraggable": "^4.1.0",
+    "survey-vue3-ui": "^1.12.13",
+    "survey-core": "^1.12.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

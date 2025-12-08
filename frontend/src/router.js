@@ -104,6 +104,16 @@ const routes = [
     name: 'Not Permitted',
     component: () => import('@/pages/NotPermitted.vue'),
   },
+  {
+    path: '/survey',
+    name: 'Survey',
+    component: () => import('@/pages/Survey.vue'),
+  },
+  {
+    path: '/survey-native',
+    name: 'Survey Native',
+    component: () => import('@/pages/SurveyNative.vue'),
+  },
 ]
 
 const handleMobileView = (componentName) => {

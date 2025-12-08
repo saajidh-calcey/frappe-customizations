@@ -244,6 +244,16 @@ const links = [
     icon: PhoneIcon,
     to: 'Call Logs',
   },
+  {
+    label: 'Survey',
+    icon: StepsIcon,
+    to: 'Survey',
+  },
+  {
+    label: 'Survey Native',
+    icon: StepsIcon,
+    to: 'Survey Native',
+  },
 ]
 
 const allViews = computed(() => {
