@@ -5,6 +5,11 @@ app_description = "all customizations for the frappe app"
 app_email = "saajidh@calcey.com"
 app_license = "mit"
 
+
+fixtures = [
+    {"dt": "Custom Field", "filters": [["dt", "like", "CRM Lead"]]},
+    {"dt": "Property Setter", "filters": [["doc_type", "like", "CRM Lead"]]}
+]
 # Apps
 # ------------------
 
