@@ -40,7 +40,7 @@
     v-if="doc.name"
     class="flex h-12 items-center justify-between gap-2 border-b px-3 py-2.5"
   >
-    <AssignTo v-model="assignees.data" doctype="CRM Lead" :docname="leadId" />
+    <AssignTo v-model="assignees.data" doctype="Lead Dupe" :docname="leadId" />
     <div class="flex items-center gap-2">
       <CustomActions
         v-if="document._actions?.length"
@@ -73,7 +73,7 @@
           >
             <SidePanelLayout
               :sections="sections.data"
-              doctype="CRM Lead"
+              doctype="Lead Dupe"
               :docname="leadId"
               @reload="sections.reload"
               @afterFieldChange="reloadAssignees"
@@ -82,7 +82,7 @@
         </div>
         <Activities
           v-else
-          doctype="CRM Lead"
+          doctype="Lead Dupe"
           :docname="leadId"
           :tabs="tabs"
           v-model:reload="reload"
@@ -167,7 +167,7 @@
   <DeleteLinkedDocModal
     v-if="showDeleteLinkedDocModal"
     v-model="showDeleteLinkedDocModal"
-    :doctype="'CRM Lead'"
+    :doctype="'Lead Dupe'"
     :docname="leadId"
     name="Leads"
   />
@@ -227,7 +227,7 @@ import { useRouter, useRoute } from 'vue-router'
 const { brand } = getSettings()
 const { $dialog, $socket } = globalStore()
 const { statusOptions, getLeadStatus } = statusesStore()
-const { doctypeMeta } = getMeta('CRM Lead')
+const { doctypeMeta } = getMeta('Lead Dupe')
 const route = useRoute()
 const router = useRouter()
 
@@ -243,7 +243,7 @@ const errorMessage = ref('')
 const showDeleteLinkedDocModal = ref(false)
 
 const { triggerOnChange, assignees, document, scripts, error } = useDocument(
-  'CRM Lead',
+  'Lead Dupe',
   props.leadId,
 )
 
@@ -291,7 +291,7 @@ const breadcrumbs = computed(() => {
   let items = [{ label: __('Leads'), route: { name: 'Leads' } }]
 
   if (route.query.view || route.query.viewType) {
-    let view = getView(route.query.view, route.query.viewType, 'CRM Lead')
+    let view = getView(route.query.view, route.query.viewType, 'Lead Dupe')
     if (view) {
       items.push({
         label: __(view.label),
@@ -313,7 +313,7 @@ const breadcrumbs = computed(() => {
 })
 
 const title = computed(() => {
-  let t = doctypeMeta['CRM Lead']?.title_field || 'name'
+  let t = doctypeMeta['Lead Dupe']?.title_field || 'name'
   return doc.value?.[t] || props.leadId
 })
 
@@ -386,8 +386,8 @@ const { tabIndex } = useActiveTabManager(tabs, 'lastLeadTab')
 
 const sections = createResource({
   url: 'crm.fcrm.doctype.crm_fields_layout.crm_fields_layout.get_sidepanel_sections',
-  cache: ['sidePanelSections', 'CRM Lead'],
-  params: { doctype: 'CRM Lead' },
+  cache: ['sidePanelSections', 'Lead Dupe'],
+  params: { doctype: 'Lead Dupe' },
   auto: true,
 })
 
@@ -445,7 +445,7 @@ async function convertToDeal() {
     existingOrganization.value = ''
   }
 
-  let deal = await call('crm.fcrm.doctype.crm_lead.crm_lead.convert_to_deal', {
+  let deal = await call('customizations.dreamlink.doctype.lead_dupe.lead_dupe.convert_to_deal', {
     lead: props.leadId,
     deal: {},
     existing_contact: existingContact.value,

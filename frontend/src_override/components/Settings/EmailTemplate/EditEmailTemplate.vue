@@ -53,7 +53,7 @@
               },
               {
                 label: __('Lead'),
-                value: 'CRM Lead',
+                value: 'Lead Dupe',
               },
             ]"
             :placeholder="__('Deal')"

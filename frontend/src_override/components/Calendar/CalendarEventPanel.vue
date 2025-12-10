@@ -69,7 +69,7 @@
         class="flex items-center px-4.5 py-1 text-ink-gray-7"
       >
         <component
-          :is="_event.referenceDoctype == 'CRM Lead' ? LeadsIcon : DealsIcon"
+          :is="_event.referenceDoctype == 'Lead Dupe' ? LeadsIcon : DealsIcon"
           class="size-4"
         />
         <Link
@@ -261,7 +261,7 @@
               },
               {
                 label: __('Lead'),
-                value: 'CRM Lead',
+                value: 'Lead Dupe',
               },
               {
                 label: __('Deal'),
@@ -285,7 +285,7 @@
         class="flex items-center justify-between px-4.5 py-[7px] text-ink-gray-7"
       >
         <div class="">
-          {{ _event.referenceDoctype == 'CRM Lead' ? __('Lead') : __('Deal') }}
+          {{ _event.referenceDoctype == 'Lead Dupe' ? __('Lead') : __('Deal') }}
         </div>
         <div class="flex items-center gap-x-1.5">
           <Link
@@ -293,7 +293,7 @@
             v-model="_event.referenceDocname"
             :doctype="_event.referenceDoctype"
             :filters="
-              _event.referenceDoctype === 'CRM Lead' ? { converted: 0 } : {}
+              _event.referenceDoctype === 'Lead Dupe' ? { converted: 0 } : {}
             "
             variant="outline"
             @update:model-value="sync"
@@ -662,10 +662,10 @@ const colors = Object.keys(colorMap).map((color) => ({
 
 function redirect() {
   if (_event.value.referenceDocname) {
-    let name = _event.value.referenceDoctype === 'CRM Lead' ? 'Lead' : 'Deal'
+    let name = _event.value.referenceDoctype === 'Lead Dupe' ? 'Lead' : 'Deal'
 
     let params =
-      _event.value.referenceDoctype == 'CRM Lead'
+      _event.value.referenceDoctype == 'Lead Dupe'
         ? { leadId: _event.value.referenceDocname }
         : { dealId: _event.value.referenceDocname }
 

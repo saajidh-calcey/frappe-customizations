@@ -127,7 +127,7 @@
             :options="[
               {
                 label: 'Lead',
-                value: 'CRM Lead',
+                value: 'Lead Dupe',
               },
               {
                 label: 'Deal',
@@ -375,7 +375,7 @@ const showConfirmDialog = ref({
 const useNewUI = ref(true)
 const isOldSla = ref(false)
 const documentType = computed(() =>
-  assignmentRuleData.value.documentType == 'CRM Lead'
+  assignmentRuleData.value.documentType == 'Lead Dupe'
     ? __('leads')
     : __('deals'),
 )
@@ -404,7 +404,7 @@ const assignmentRuleData = ref({
   name: '',
   assignmentRuleName: '',
   assignmentDays: defaultAssignmentDays,
-  documentType: 'CRM Lead',
+  documentType: 'Lead Dupe',
 })
 
 const validateAssignmentRule = (key, skipConditionCheck = false) => {
@@ -498,7 +498,7 @@ const resetAssignmentRuleData = () => {
     name: '',
     assignmentRuleName: '',
     assignmentDays: defaultAssignmentDays,
-    documentType: 'CRM Lead',
+    documentType: 'Lead Dupe',
   }
 }
 

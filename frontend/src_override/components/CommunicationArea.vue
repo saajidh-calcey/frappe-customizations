@@ -98,7 +98,7 @@ import { ref, watch, computed } from 'vue'
 const props = defineProps({
   doctype: {
     type: String,
-    default: 'CRM Lead',
+    default: 'Lead Dupe',
   },
 })
 

@@ -32,7 +32,7 @@ const props = defineProps({
   data: Object,
   doctype: {
     type: String,
-    default: 'CRM Lead',
+    default: 'Lead Dupe',
   },
   isGridRow: {
     type: Boolean,

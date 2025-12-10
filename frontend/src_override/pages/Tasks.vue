@@ -322,7 +322,7 @@ const task = ref({
   due_date: '',
   status: 'Backlog',
   priority: 'Low',
-  reference_doctype: 'CRM Lead',
+  reference_doctype: 'Lead Dupe',
   reference_docname: '',
 })
 
@@ -351,7 +351,7 @@ function createTask(column) {
     due_date: '',
     status: 'Backlog',
     priority: 'Low',
-    reference_doctype: 'CRM Lead',
+    reference_doctype: 'Lead Dupe',
     reference_docname: '',
   }
 

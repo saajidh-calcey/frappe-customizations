@@ -58,7 +58,7 @@ import { ref, watch, onMounted, nextTick } from 'vue'
 const props = defineProps({
   doctype: {
     type: String,
-    default: 'CRM Lead',
+    default: 'Lead Dupe',
   },
 })
 

@@ -40,7 +40,7 @@ const { document } = useDocument(props.doctype, props.docname)
 const assignees = defineModel()
 
 const ownerField = computed(() => {
-  if (props.doctype === 'CRM Lead') {
+  if (props.doctype === 'Lead Dupe') {
     return 'lead_owner'
   } else if (props.doctype === 'CRM Deal') {
     return 'deal_owner'

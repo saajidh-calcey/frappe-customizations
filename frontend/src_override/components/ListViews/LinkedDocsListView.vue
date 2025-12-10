@@ -105,7 +105,7 @@ const viewLinkedDoc = (doc) => {
   let id = ''
   let openDesk = false
   switch (doc.reference_doctype) {
-    case 'CRM Lead':
+    case 'Lead Dupe':
       page = 'leads'
       id = doc.reference_docname
       break

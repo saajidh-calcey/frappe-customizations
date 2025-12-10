@@ -74,7 +74,7 @@
           v-model="currentDoctype"
           :options="[
             { label: __('All'), value: 'All' },
-            { label: __('Lead'), value: 'CRM Lead' },
+            { label: __('Lead'), value: 'Lead Dupe' },
             { label: __('Deal'), value: 'CRM Deal' },
           ]"
         />

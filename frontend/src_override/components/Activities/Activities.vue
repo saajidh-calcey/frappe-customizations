@@ -518,7 +518,7 @@ const { getUser } = usersStore()
 const props = defineProps({
   doctype: {
     type: String,
-    default: 'CRM Lead',
+    default: 'Lead Dupe',
   },
   docname: {
     type: String,

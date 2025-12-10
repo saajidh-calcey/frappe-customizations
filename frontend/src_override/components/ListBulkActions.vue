@@ -90,7 +90,7 @@ function convertToDeal(selections, unselectAll) {
         onClick: (close) => {
           capture('bulk_convert_to_deal')
           Array.from(selections).forEach((name) => {
-            call('crm.fcrm.doctype.crm_lead.crm_lead.convert_to_deal', {
+            call('customizations.dreamlink.doctype.lead_dupe.lead_dupe.convert_to_deal', {
               lead: name,
             }).then(() => {
               toast.success(__('Converted successfully'))
@@ -192,7 +192,7 @@ function bulkActions(selections, unselectAll) {
     })
   }
 
-  if (props.doctype === 'CRM Lead') {
+  if (props.doctype === 'Lead Dupe') {
     actions.push({
       label: __('Convert to Deal'),
       onClick: () => convertToDeal(selections, unselectAll),

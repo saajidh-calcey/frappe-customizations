@@ -297,10 +297,10 @@ watch(
 const leadFields = createResource({
 	url: "crm.api.doc.get_fields_meta",
 	params: {
-		doctype: "CRM Lead",
+		doctype: "Lead Dupe",
 		as_array: true,
 	},
-	cache: ["fieldsMeta", "CRM Lead"],
+	cache: ["fieldsMeta", "Lead Dupe"],
 	auto: true,
 	transform: (data) => {
 		let restrictedFields = [

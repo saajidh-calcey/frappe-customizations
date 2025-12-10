@@ -22,7 +22,7 @@
     v-model:loadMore="loadMore"
     v-model:resizeColumn="triggerResize"
     v-model:updatedPageCount="updatedPageCount"
-    doctype="CRM Lead"
+    doctype="Lead Dupe"
     :filters="{ converted: 0 }"
     :options="{
       allowedViews: ['list', 'group_by', 'kanban'],
@@ -274,14 +274,14 @@
     v-if="showNoteModal"
     v-model="showNoteModal"
     :note="note"
-    doctype="CRM Lead"
+    doctype="Lead Dupe"
     :doc="docname"
   />
   <TaskModal
     v-if="showTaskModal"
     v-model="showTaskModal"
     :task="task"
-    doctype="CRM Lead"
+    doctype="Lead Dupe"
     :doc="docname"
   />
 </template>
@@ -315,7 +315,7 @@ import { useRoute } from 'vue-router'
 import { ref, computed, reactive, h } from 'vue'
 
 const { getFormattedPercent, getFormattedFloat, getFormattedCurrency } =
-  getMeta('CRM Lead')
+  getMeta('Lead Dupe')
 const { makeCall } = globalStore()
 const { getUser } = usersStore()
 const { getLeadStatus } = statusesStore()

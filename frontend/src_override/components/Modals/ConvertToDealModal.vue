@@ -126,7 +126,7 @@ const existingContact = ref('')
 const existingOrganization = ref('')
 const error = ref('')
 
-const { triggerConvertToDeal } = useDocument('CRM Lead', props.lead.name)
+const { triggerConvertToDeal } = useDocument('Lead Dupe', props.lead.name)
 const { document: deal } = useDocument('CRM Deal')
 
 async function convertToDeal() {
@@ -152,7 +152,7 @@ async function convertToDeal() {
 
   await triggerConvertToDeal?.(props.lead, deal.doc, () => (show.value = false))
 
-  let _deal = await call('crm.fcrm.doctype.crm_lead.crm_lead.convert_to_deal', {
+  let _deal = await call('customizations.dreamlink.doctype.lead_dupe.lead_dupe.convert_to_deal', {
     lead: props.lead.name,
     deal: deal.doc,
     existing_contact: existingContact.value,
