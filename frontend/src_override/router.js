@@ -67,15 +67,15 @@ const routes = [
     props: true,
   },
   {
-    alias: '/organizations',
-    path: '/organizations/view/:viewType?',
-    name: 'Organizations',
-    component: () => import('@/pages/Organizations.vue'),
+    alias: '/saving-groups',
+    path: '/saving-groups/view/:viewType?',
+    name: 'Saving Groups',
+    component: () => import('@/pages/SavingGroups.vue'),
   },
   {
-    path: '/organizations/:organizationId',
-    name: 'Organization',
-    component: () => import(`@/pages/${handleMobileView('Organization')}.vue`),
+    path: '/saving-groups/:savingGroupId',
+    name: 'Saving Group',
+    component: () => import(`@/pages/${handleMobileView('SavingGroup')}.vue`),
     props: true,
   },
   {

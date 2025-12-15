@@ -4,6 +4,12 @@ app_publisher = "saajidh"
 app_description = "all customizations for the frappe app"
 app_email = "saajidh@calcey.com"
 app_license = "mit"
+module_name = "dreamlink"
+
+fixtures = [
+    {"dt": "Custom Field", "filters": [["module", "like", module_name]]},
+    {"dt": "Property Setter", "filters": [["module", "like", module_name]]}
+]
 
 # Apps
 # ------------------
