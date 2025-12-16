@@ -183,10 +183,8 @@ fixtures = [
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "customizations.event.get_events"
-# }
-#
+override_whitelisted_methods = {"crm.api.doc.get_data": "customizations.api.crm_overrides.get_data"}
+
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
