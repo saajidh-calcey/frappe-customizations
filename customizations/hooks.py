@@ -9,6 +9,7 @@ module_name = "dreamlink"
 fixtures = [
 	{"dt": "Custom Field", "filters": [["module", "like", module_name]]},
 	{"dt": "Property Setter", "filters": [["module", "like", module_name]]},
+	{"dt": "CRM Fields Layout", "filters": [["dt", "=", "CRM Lead"]]},
 ]
 
 # Apps

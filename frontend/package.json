@@ -16,6 +16,8 @@
     "@vueuse/integrations": "^10.3.0",
     "frappe-ui": "^0.1.201",
     "gemoji": "^8.1.0",
+    "leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
     "lodash": "^4.17.21",
     "mime": "^4.0.1",
     "pinia": "^2.0.33",
